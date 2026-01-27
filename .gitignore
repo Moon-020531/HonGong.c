@@ -1,0 +1,8 @@
+# 1. 모든 파일을 일단 무시 (Ignore everything)
+*
+
+# 2. .c 파일은 무시하지 않음 (예외 처리)
+!*.c
+
+# 3. .gitignore 파일 자체도 무시하지 않음
+!.gitignore
