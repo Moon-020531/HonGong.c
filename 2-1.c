@@ -7,7 +7,7 @@ int main(void) {
     int b = 1000;
     int c = 0;
     int d = 0; 
-    int e = 0; 
+    double e = 0; 
 
     printf("5명 심사위원의 점수 입력: ");
 
@@ -25,7 +25,7 @@ int main(void) {
         }
     }
 
-    e = (d - c - b) / 3;   // 최고점과 최저점 뺀 평균
+    e = (double)(d - c - b) / 3;   // 최고점과 최저점 뺀 평균
    
     printf("유효 점수: ");
     int count = 0; 
@@ -47,7 +47,7 @@ int main(void) {
     }
     printf("\n");
 
-    printf("평균: %d\n", e);
+    printf("평균: %.1lf\n", e);
 
     return 0;
 }
