@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+ï»¿#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
 int main(void) {
@@ -10,14 +10,14 @@ int main(void) {
 	double sec;
 	double time;
 
-	printf("°Å¸®¿Í ¼Ó·ÂÀ» ÀÔ·ÂÇÏ¼¼¿ä: ");
-	scanf("%d %d", &km, &kmh);					//°Å¸®¿Í ¼Ó·ÂÀ» ÀÔ·Â¹ŞÀ½
+	printf("ê±°ë¦¬ì™€ ì†ë ¥ì„ ì…ë ¥í•˜ì„¸ìš”: ");
+	scanf("%d %d", &km, &kmh);					//ê±°ë¦¬ì™€ ì†ë ¥ì„ ì…ë ¥ë°›ìŒ
 
-	time = (double)km / (double)kmh;			// °Å¸®/¼Ó·Â = ½Ã°£
-	hour = (int)time;							//½Ã°£¿¡¼­ ½Ã°£ºÎºĞ¸¸ ÃßÃâ
-	min = (int)((time - hour) * 60);			//½Ã°£¿¡¼­ ºĞºÎºĞ¸¸ ÃßÃâ
-	sec = (((time - hour) * 60 - min) * 60);	//½Ã°£¿¡¼­ ÃÊºÎºĞ¸¸ ÃßÃâ
+	time = (double)km / (double)kmh;			// ê±°ë¦¬/ì†ë ¥ = ì‹œê°„
+	hour = (int)time;							//ì‹œê°„ì—ì„œ ì‹œê°„ë¶€ë¶„ë§Œ ì¶”ì¶œ
+	min = (int)((time - hour) * 60);			//ì‹œê°„ì—ì„œ ë¶„ë¶€ë¶„ë§Œ ì¶”ì¶œ
+	sec = (((time - hour) * 60 - min) * 60);	//ì‹œê°„ì—ì„œ ì´ˆë¶€ë¶„ë§Œ ì¶”ì¶œ
 
-	printf("¼Ò¿ä½Ã°£Àº %d½Ã°£%dºĞ%.3lfÃÊÀÔ³ª´Ù", hour, min, sec);		//Ãâ·Â
+	printf("ì†Œìš”ì‹œê°„ì€ %dì‹œê°„%dë¶„%.3lfì´ˆì…ë‚˜ë‹¤", hour, min, sec);		//ì¶œë ¥
 	
 }
