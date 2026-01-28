@@ -15,6 +15,7 @@ int main(void){
 		if (d == '\n') {
 			rotate(&a, &b, &c);
 			printf("%d %d %d", a, b, c);
+			i--;
 			continue;
 		}
 		else
