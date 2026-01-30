@@ -13,8 +13,9 @@ int main(void) {
 	int a1 = 5;
 	int a2 = 4;
 	int a3 = 0;
-
+	char refund;
 	while (1) {
+		
 		
 		printf("=====자판기======\n");
 
@@ -68,6 +69,21 @@ int main(void) {
 		scanf("%d", &money);
 		printf("투입된 금액: %d\n", money);
 
+		printf("환불을 원하시면 0 계속 진행하실려면 엔터를 눌러주세요\n");
+		scanf("%d", &refund);
+		if (refund == 0) {
+			if (menu == 1) {
+				a1++;
+			}
+			else if (menu == 2) {
+				a2++;
+			}
+			else if (menu == 3) {
+				a3++;
+			}
+			printf("%d원이 환불되었습니다.\n", money);
+			continue;
+		}
 		money2 = money - price;
 		if (money2 < 0) {
 			printf("돈이 %d원 부족합니다.\n",money2);
