@@ -10,28 +10,51 @@ int main(void) {
 	int money2;
 	char name[100] = { 0 };
 	int buy;
+	int a1 = 5;
+	int a2 = 4;
+	int a3 = 0;
 
 	while (1) {
+		
 		printf("=====자판기======\n");
 
 		printf("메뉴를 선택해주세요:\n");
 
-		printf("1.콜라(1500원) 2.사이다(1400원) 3.환타(1350원)\n");
+		printf("1.콜라(1500원) %d개 2.사이다(1400원) %d개 3.환타(1350원) %d개\n",a1,a2,a3);
 		scanf("%d", &menu);
 		if (menu == 1) {
 			strcpy(name, "콜라");
 			choice = menu;
 			price = 1500;
+			a1--;
+			if (a1 == -1) {
+				printf("콜라는 품절 되었습니다 다른 메뉴를 선택해주세요\n");
+				a1++;
+				continue;
+			}
+
 		}
 		else if (menu == 2) {
 			strcpy(name, "사이다");
 			choice = menu;
 			price = 1400;
+			a2--;
+			if (a2 == -1) {
+				printf("사이다는 품절 되었습니다 다른 메뉴를 선택해주세요\n");
+				a2++;
+				continue;
+			}
 		}
 		else if (menu == 3) {
 			strcpy(name, "환타");
 			choice = menu;
 			price = 1350;
+			a3--;
+			if (a3 == -1) {
+				printf("환타는 품절 되었습니다 다른 메뉴를 선택해주세요\n");
+				a3++;
+				continue;
+			}
 		}
 		else {
 			printf("메뉴를 다시 선택해주세요.\n");
@@ -47,12 +70,23 @@ int main(void) {
 
 		money2 = money - price;
 		if (money2 < 0) {
-			printf("돈이 부족합니다.\n");
+			printf("돈이 %d원 부족합니다.\n",money2);
 			printf("===================\n");
 			printf(" \n");
+
+			if (menu == 1) {
+				a1++;
+			}
+			else if (menu == 2) {
+				a2++;
+			}
+			else if (menu == 3) {
+				a3++;
+			}
+			continue;
 		}
 		else {
-			printf("선택하신 %s이 나왔습니다.\n", name);
+			printf("선택하신 %s가 나왔습니다.\n", name);
 			printf("거스름돈:%d\n", money2);
 			printf("===================\n");
 			printf(" \n");
@@ -66,5 +100,6 @@ int main(void) {
 		else {
 			break;
 		}
+		
 	}
 }
